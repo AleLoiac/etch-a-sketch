@@ -42,9 +42,12 @@ const getRandomColor = () => {
 
 container.addEventListener("mouseover", (e) => {
     const target = e.target;
+    let opacity = Number(target.style.opacity);
 
     if (target.classList.value === "hover") {
         target.style.background = getRandomColor();
+        opacity += 0.1;
+        target.style.opacity = opacity;
     }
 })
 
