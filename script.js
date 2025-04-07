@@ -45,7 +45,10 @@ container.addEventListener("mouseover", (e) => {
     let opacity = Number(target.style.opacity);
 
     if (target.classList.value === "hover") {
-        target.style.background = getRandomColor();
+        // make it random only on the first hovering
+        if (target.style.background === "") {
+            target.style.background = getRandomColor();
+        }
         opacity += 0.1;
         target.style.opacity = opacity;
     }
