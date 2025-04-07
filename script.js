@@ -6,8 +6,6 @@ buttonSetGrid.textContent = "Set Grid";
 
 body.insertBefore(buttonSetGrid, container);
 
-buttonSetGrid.addEventListener("click", removeGrid);
-
 function removeGrid () {
     const squareNodes = document.querySelectorAll(".hover");
     for (square of squareNodes) {
@@ -48,3 +46,9 @@ container.addEventListener("mouseover", (e) => {
 })
 
 generateGrid(16);
+
+buttonSetGrid.addEventListener("click", () => {
+    const num = prompt("Insert new grid size:")
+    removeGrid();
+    generateGrid(num);
+});
