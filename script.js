@@ -1,10 +1,17 @@
 const container = document.querySelector(".container");
+const body = document.querySelector("body");
+
+const buttonSetGrid = document.createElement("button");
+buttonSetGrid.textContent = "Set Grid";
+
+body.insertBefore(buttonSetGrid, container);
 
 for (let i = 0; i < 256; i++) {
     const squareDiv = document.createElement("div");
     container.appendChild(squareDiv);
     squareDiv.classList.add("hover");
 }
+
 const squareNodes = document.querySelectorAll(".hover");
 
 const getRandomColor = () => {

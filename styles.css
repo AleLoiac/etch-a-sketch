@@ -19,3 +19,10 @@ html {
     height: 50px;
     border: 1px solid grey;
 }
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 3px 20px;
+    font-size: large;
+}
