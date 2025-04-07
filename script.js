@@ -18,9 +18,12 @@ function generateGrid (number) {
         alert("Invalid number");
         return;
     } else {
-        totalSquares = number * number;
+        const totalSquares = number * number;
+
         for (let i = 0; i < totalSquares; i++) {
             const squareDiv = document.createElement("div");
+            squareDiv.style.width = 800/number + "px";
+            squareDiv.style.height = 800/number + "px";
             container.appendChild(squareDiv);
             squareDiv.classList.add("hover");
         }
